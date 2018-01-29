@@ -15,9 +15,9 @@ pipeline {
         }
       }
     }
-    stage('') {
+    stage('Print') {
       steps {
-        sh 'echo "One is: ${ONE} and two is: ${TWO}"'
+        sh 'echo "One is: $ONE and two is: $TWO"'
       }
     }
   }
