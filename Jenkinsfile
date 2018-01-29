@@ -5,14 +5,19 @@ pipeline {
       parallel {
         stage('Echo') {
           steps {
-            sh 'echo "This is Awesome"'
+            sh 'ONE="This is Awesome"'
           }
         }
         stage('Parallel Step') {
           steps {
-            sh 'echo "Running a parallel step"'
+            sh 'TWO="Parallel Step"'
           }
         }
+      }
+    }
+    stage('') {
+      steps {
+        sh 'echo "One is: ${ONE} and two is: ${TWO}"'
       }
     }
   }
